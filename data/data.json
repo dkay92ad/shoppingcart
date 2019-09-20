@@ -1,0 +1,31 @@
+{
+    "product_list": [
+        {
+            "Brand_name": "Amul",
+            "product_name": "Amul Pure Ghee",
+            "Quantity": "1L",
+            "MRP": "300",
+            "Price": "275",
+            "Image_url": "/assets/images/Amul_Pure_Ghee.jpg",
+            "Offer_text": "12%"
+        },
+        {
+            "Brand_name": "",
+            "product_name": "",
+            "Quantity": "",
+            "MRP": "",
+            "Price": "",
+            "Image_url": "",
+            "Offer_text": ""
+        },
+        {
+            "Brand_name": "",
+            "product_name": "",
+            "Quantity": "",
+            "MRP": "",
+            "Price": "",
+            "Image_url": "",
+            "Offer_text": ""
+        }
+    ]
+}

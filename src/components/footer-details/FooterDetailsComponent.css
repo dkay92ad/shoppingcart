@@ -1,0 +1,26 @@
+.footer-details{
+    height: 4rem;
+    background-color: #da63da;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  .footer-left{
+    display: inline-block;
+    height: 100%;
+  }
+  .footer-left .left{
+    padding: 0.5em;
+    font-weight: bold; 
+  }
+  .footer-right{
+      position: absolute;
+      right: 5%;
+      padding: 0.5em;
+      transform: translate(0%, 75%);
+      background-color: #41b641;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      width: 10em;
+  }

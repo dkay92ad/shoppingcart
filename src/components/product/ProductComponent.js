@@ -1,14 +1,29 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import './ProductComponent.css';
+
 
 const Product = (props) => {
   const [productCount, setProductCount] = useState(0);
+  const [imageVisible, setImageVisible] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, true);
+    console.log('counting...');
+    if(props.product.Product_id <= 3 ){
+      setImageVisible(true);
+    }
+  },[]);
 
+  const handleScroll = () => {
+    let visibleElements = parseInt(window.pageYOffset/180) + 3;
+    if(props.product.Product_id <= visibleElements ){
+      setImageVisible(true);
+    }
+  }
     return (
         <div className="product-details">
           <div className="product-details-left">
             <div className="product-image">
-                <img src={props.product.Image_url} alt='product'/>
+                {imageVisible && <img src={props.product.Image_url} alt='product'/>}
             </div>
             <div className="product-offer">
                 <span>{props.product.Offer_text}</span>

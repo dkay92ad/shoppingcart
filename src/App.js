@@ -27,7 +27,7 @@ class App extends Component {
       }
     ).catch((err) => {
       console.log(err);
-    })
+    });
   }
   componentDidUpdate(){
     console.log('conponentDidUpdate...');
@@ -44,9 +44,7 @@ class App extends Component {
       cartTotalPrice: prevState.cartTotalPrice - price}));
   }
   closeModalHandler = () => {
-    this.setState({showModalPopup: false,
-      cartQty: 0,
-      cartTotalPrice: 0})
+    this.setState({showModalPopup: false});
   }
 
   render() {

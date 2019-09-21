@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch('/data/data.json').then(
+    fetch('./data/data.json').then(
       (response) => {
         return response.json();
       }

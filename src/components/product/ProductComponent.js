@@ -23,10 +23,8 @@ const Product = (props) => {
             <div className="add-to-cart">
               <button 
               className="add-cart"
-              disabled={productCount > 0}
               onClick={() => {
-                setProductCount((prevCount) => 
-                  prevCount === 0? prevCount + 1: 0);
+                setProductCount((prevCount) => prevCount + 1);
                 props.productAddHandler(props.product.Price);
               }} >ADD CART</button>
               <div className="inc-dec">

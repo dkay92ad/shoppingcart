@@ -7,7 +7,7 @@
             "Quantity": "1L",
             "MRP": "300",
             "Price": "275",
-            "Image_url": "/assets/images/Amul_Ice_Cream.jpg",
+            "Image_url": "assets/images/Amul_Ice_Cream.jpg",
             "Offer_text": "12% off"
         },
         {
@@ -17,7 +17,7 @@
             "Quantity": "1L",
             "MRP": "480",
             "Price": "399",
-            "Image_url": "/assets/images/Breyers_Classics.jpg",
+            "Image_url": "assets/images/Breyers_Classics.jpg",
             "Offer_text": "buy 1 get 1"
         },
         {
@@ -27,7 +27,7 @@
             "Quantity": "300ML",
             "MRP": "240",
             "Price": "240",
-            "Image_url": "/assets/images/Magnum_Mini.jpg",
+            "Image_url": "assets/images/Magnum_Mini.jpg",
             "Offer_text": ""
         },
         {
@@ -37,7 +37,7 @@
             "Quantity": "375ML",
             "MRP": "425",
             "Price": "390",
-            "Image_url": "/assets/images/Ben_And_Jerry's.jpg",
+            "Image_url": "assets/images/Ben_And_Jerry's.jpg",
             "Offer_text": "15% off"
         },
         {
@@ -47,7 +47,7 @@
             "Quantity": "500ML",
             "MRP": "390",
             "Price": "390",
-            "Image_url": "/assets/images/Breyers_Choco.jpg",
+            "Image_url": "assets/images/Breyers_Choco.jpg",
             "Offer_text": ""
         },
         {
@@ -57,7 +57,7 @@
             "Quantity": "500ML",
             "MRP": "378",
             "Price": "300",
-            "Image_url": "/assets/images/Haagen-Dazs.jpg",
+            "Image_url": "assets/images/Haagen-Dazs.jpg",
             "Offer_text": "20% off"
         },
         {
@@ -67,7 +67,7 @@
             "Quantity": "250ML",
             "MRP": "175",
             "Price": "175",
-            "Image_url": "/assets/images/Halo_Top.jpg",
+            "Image_url": "assets/images/Halo_Top.jpg",
             "Offer_text": ""
         },
         {
@@ -77,7 +77,7 @@
             "Quantity": "500ML",
             "MRP": "300",
             "Price": "257",
-            "Image_url": "/assets/images/Kroger_Deluxe.jpg",
+            "Image_url": "assets/images/Kroger_Deluxe.jpg",
             "Offer_text": "11% off"
         },
         {
@@ -87,7 +87,7 @@
             "Quantity": "500ML",
             "MRP": "630",
             "Price": "600",
-            "Image_url": "/assets/images/Magnum_Dark.jpg",
+            "Image_url": "assets/images/Magnum_Dark.jpg",
             "Offer_text": "5% off"
         },
         {
@@ -97,7 +97,7 @@
             "Quantity": "500ML",
             "MRP": "375",
             "Price": "375",
-            "Image_url": "/assets/images/Nestle_Orange.jpg",
+            "Image_url": "assets/images/Nestle_Orange.jpg",
             "Offer_text": ""
         }
     ]

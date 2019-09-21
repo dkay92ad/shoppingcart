@@ -1,30 +1,103 @@
 {
     "product_list": [
         {
+            "Product_id": "1",
             "Brand_name": "Amul",
-            "product_name": "Amul Pure Ghee",
+            "Product_name": "Amul King Alphanso",
             "Quantity": "1L",
             "MRP": "300",
             "Price": "275",
-            "Image_url": "/assets/images/Amul_Pure_Ghee.jpg",
-            "Offer_text": "12%"
+            "Image_url": "/assets/images/Amul_Ice_Cream.jpg",
+            "Offer_text": "12% off"
         },
         {
-            "Brand_name": "",
-            "product_name": "",
-            "Quantity": "",
-            "MRP": "",
-            "Price": "",
-            "Image_url": "",
+            "Product_id": "2",
+            "Brand_name": "Breyers",
+            "Product_name": "Breyers Familiy Classic",
+            "Quantity": "1L",
+            "MRP": "480",
+            "Price": "399",
+            "Image_url": "/assets/images/Breyers_Classics.jpg",
+            "Offer_text": "buy 1 get 1"
+        },
+        {
+            "Product_id": "3",
+            "Brand_name": "Magnum",
+            "Product_name": "Magnum Mini Classic Mint Almond",
+            "Quantity": "300ML",
+            "MRP": "240",
+            "Price": "240",
+            "Image_url": "/assets/images/Magnum_Mini.jpg",
             "Offer_text": ""
         },
         {
-            "Brand_name": "",
-            "product_name": "",
-            "Quantity": "",
-            "MRP": "",
-            "Price": "",
-            "Image_url": "",
+            "Product_id": "4",
+            "Brand_name": "Ben & Jerry's",
+            "Product_name": "Ben & Jerry's Cherry Garcia",
+            "Quantity": "375ML",
+            "MRP": "425",
+            "Price": "390",
+            "Image_url": "/assets/images/Ben_And_Jerry's.jpg",
+            "Offer_text": "15% off"
+        },
+        {
+            "Product_id": "5",
+            "Brand_name": "Beyers",
+            "Product_name": "Beyers Chocolate",
+            "Quantity": "500ML",
+            "MRP": "390",
+            "Price": "390",
+            "Image_url": "/assets/images/Breyers_Choco.jpg",
+            "Offer_text": ""
+        },
+        {
+            "Product_id": "6",
+            "Brand_name": "Haagen-Dazs",
+            "Product_name": "Haagen-Dazs Vanilla Ice Cream",
+            "Quantity": "500ML",
+            "MRP": "378",
+            "Price": "300",
+            "Image_url": "/assets/images/Haagen-Dazs.jpg",
+            "Offer_text": "20% off"
+        },
+        {
+            "Product_id": "7",
+            "Brand_name": "Halo Top",
+            "Product_name": "Halo Top Oatmeal Cookie",
+            "Quantity": "250ML",
+            "MRP": "175",
+            "Price": "175",
+            "Image_url": "/assets/images/Halo_Top.jpg",
+            "Offer_text": ""
+        },
+        {
+            "Product_id": "8",
+            "Brand_name": "Kroger",
+            "Product_name": "Kroger Deluxe Peppermint",
+            "Quantity": "500ML",
+            "MRP": "300",
+            "Price": "257",
+            "Image_url": "/assets/images/Kroger_Deluxe.jpg",
+            "Offer_text": "11% off"
+        },
+        {
+            "Product_id": "9",
+            "Brand_name": "Magnum",
+            "Product_name": "Magnum Dark Chocolate",
+            "Quantity": "500ML",
+            "MRP": "630",
+            "Price": "600",
+            "Image_url": "/assets/images/Magnum_Dark.jpg",
+            "Offer_text": "5% off"
+        },
+        {
+            "Product_id": "10",
+            "Brand_name": "Nestle",
+            "Product_name": "Nestle Orange Cream",
+            "Quantity": "500ML",
+            "MRP": "375",
+            "Price": "375",
+            "Image_url": "/assets/images/Nestle_Orange.jpg",
             "Offer_text": ""
         }
     ]

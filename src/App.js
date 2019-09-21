@@ -28,18 +28,6 @@ class App extends Component {
     ).catch((err) => {
       console.log(err);
     })
-    //image...
-    fetch('assets/images/Amul_Ice_Cream.jpg').then(
-      (response) => {
-        //return response.json();
-        console.log(response);
-        var elem = document.createElement("img");
-        elem.src = response.url;
-        document.getElementById('xxx').appendChild(elem);
-      }
-    ).catch((err) => {
-      console.log(err);
-    })
   }
   componentDidUpdate(){
     console.log('conponentDidUpdate...');
@@ -76,7 +64,7 @@ class App extends Component {
     });
 
     return (
-      <div className="App" id="xxx">
+      <div className="App">
         {productsArrayDisplay}
         {this.state.showModalPopup && <ModalComponent 
         closeModalHandler = {this.closeModalHandler}

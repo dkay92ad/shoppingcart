@@ -3,8 +3,10 @@
 }
 button{
   outline: none;
+  cursor: pointer;
 }
 button:disabled{
   background-color: grey!important;
   color: white;
+  cursor: not-allowed;
 }

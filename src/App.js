@@ -32,7 +32,6 @@ class App extends Component {
   }
   componentDidUpdate(){
     console.log('conponentDidUpdate...');
-    
     /*this.setState(() => {
       throw new Error('hi');
     })*/

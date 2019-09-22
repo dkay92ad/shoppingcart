@@ -16,6 +16,7 @@
     width: 2em;
     font-family: sans-serif;
     border-radius: 4px;
+    cursor: pointer;
 }
 .modal-popup .modal-content{
   position: relative;

@@ -18,6 +18,9 @@ class ErrorBoundaryComponent extends Component {
         if (process.env.NODE_ENV === 'development') {
           console.log(info);
         }
+        //process.env.NODE_ENV = 'production'
+        console.log(process.env.NODE_ENV);
+        console.log(info);
     }
 
     render() {

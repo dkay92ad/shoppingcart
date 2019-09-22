@@ -32,11 +32,10 @@ class App extends Component {
   }
   componentDidUpdate(){
     console.log('conponentDidUpdate...');
-    //process.env.NODE_ENV = 'production'
-    console.log(process.env.NODE_ENV);
-    this.setState(() => {
+    
+    /*this.setState(() => {
       throw new Error('hi');
-    })
+    })*/
   }
   checkoutHandler = () => {
     this.setState({showModalPopup: true});

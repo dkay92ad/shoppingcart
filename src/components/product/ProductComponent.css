@@ -1,9 +1,9 @@
 .product-details{
-    display: grid;
-    grid-template-areas: "product-left product-right";
-    grid-template-columns: 2fr 5fr;
-    grid-template-rows: 180px;
-    border-bottom: 1px solid black;
+  display: grid;
+  grid-template-areas: "product-left product-right";
+  grid-template-columns: 2fr 5fr;
+  grid-template-rows: 180px;
+  border-bottom: 1px solid black;
 }
 .product-details-left{
   grid-area: product-left;
@@ -59,19 +59,19 @@
   width: max-content;
 }
 .inc-dec .plus{
-    background-color: #41b641;
-    font-weight: bold;
-    border: none;
-    padding: 0.5em;
-    border-radius: 50%;
+  background-color: #41b641;
+  font-weight: bold;
+  border: none;
+  padding: 0.5em;
+  border-radius: 50%;
 }
 .inc-dec .added-quantity{
   padding: 0 0.5em;
 }
 .inc-dec .minus{
-    background-color: #41b641;
-    font-weight: bold;
-    border: none;
-    padding: 0.5em;
-    border-radius: 50%;
+  background-color: #41b641;
+  font-weight: bold;
+  border: none;
+  padding: 0.5em;
+  border-radius: 50%;
 }

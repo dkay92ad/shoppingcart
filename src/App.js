@@ -2,7 +2,8 @@ import React, { Component, Suspense } from 'react';
 import './App.css';
 import FooterDetailsComponent from './components/footer-details/FooterDetailsComponent';
 import ModalComponent from './components/modal/ModalComponent';
-import ErrorBoundaryComponent from './components/error-boundary/ErrorBoundaryComponent'; 
+import ErrorBoundaryComponent from './components/error-boundary/ErrorBoundaryComponent';
+
 const ProductComponent = React.lazy(() => import('./components/product/ProductComponent'));
 
 class App extends Component {
@@ -23,7 +24,6 @@ class App extends Component {
       }
     ).then(
       (data) => {
-        //console.log(data);
         this.setState({products: data.product_list});
       }
     ).catch((err) => {
@@ -32,9 +32,6 @@ class App extends Component {
   }
   componentDidUpdate(){
     console.log('conponentDidUpdate...');
-    /*this.setState(() => {
-      throw new Error('hi');
-    })*/
   }
   checkoutHandler = () => {
     this.setState({showModalPopup: true});
@@ -54,9 +51,11 @@ class App extends Component {
   render() {
     const productsArrayDisplay = this.state.products.map((product) => {
       return (
-        <Suspense key={product.Product_id} fallback={<div>Loading...</div>}>
+        <Suspense 
+        key = {product.Product_id} 
+        fallback = {<div className="fallback"></div>}>
           <ProductComponent 
-          key={product.Product_id} 
+          key = {product.Product_id} 
           product = {product} 
           quantity = {this.state.cartQty}
           productAddHandler = {this.productAddHandler}

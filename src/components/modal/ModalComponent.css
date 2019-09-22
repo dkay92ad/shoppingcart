@@ -19,9 +19,9 @@
     cursor: pointer;
 }
 .modal-popup .modal-content{
-  position: relative;
-  top: 30%;
-  font-size: 1.5em;
+    position: relative;
+    top: 30%;
+    font-size: 1.5em;
 }
 .modal-popup .modal-content .total-price{
     padding-bottom: 2em;

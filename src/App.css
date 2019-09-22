@@ -10,3 +10,7 @@ button:disabled{
   color: white;
   cursor: not-allowed;
 }
+.fallback {
+  height: 180px;
+  border-bottom: 1px solid black;
+}

@@ -1,73 +1,83 @@
-import React,{useState, useEffect} from 'react';
+import React, { Component } from 'react';
 import './ProductComponent.css';
 
-
-const Product = (props) => {
-  const [productCount, setProductCount] = useState(0);
-  const [imageVisible, setImageVisible] = useState(false);
-
-  const handleScroll = () => {
+class ProductComponent extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			productCount: 0,
+			imageVisible: false
+		}
+	}
+	handleScroll = () => {
     //each product detail takes up 180px height..
     let visibleElements = parseInt(window.pageYOffset/160) + 3;
-    if(props.product.Product_id <= visibleElements ){
-      setImageVisible(true);
+    if(this.props.product.Product_id <= visibleElements ){
+      this.setState({imageVisible: true});
     }
   }
+	componentDidMount(){
+		window.addEventListener('scroll', this.handleScroll, true);
+		//console.log('counting...');
+		if(this.props.product.Product_id <= 3 ){
+			this.setState({imageVisible: true});
+		}
+	}
+	componentWillUnmount(){
+		window.removeEventListener('scroll', this.handleScroll, true);
+	}
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, true);
-    console.log('counting...');
-    if(props.product.Product_id <= 3 ){
-      setImageVisible(true);
-    }
-    return () => {window.removeEventListener('scroll', handleScroll, true);}
-  },[props.product.Product_id]);
-  
-    return (
-        <div className="product-details">
-          <div className="product-details-left">
-            <div className="product-image">
-                {imageVisible && <img src={props.product.Image_url} alt='product'/>}
-            </div>
-            <div className="product-offer">
-                <span>{props.product.Offer_text}</span>
-            </div>
-          </div>
-          <div className="product-details-right">
-            <div className="brand-name">{props.product.Brand_name}</div>
-            <div className="product-name">{props.product.Product_name}</div>
-            <div className="quantity">{props.product.Quantity}</div>
-            <div className="mrp">MRP {props.product.MRP}</div>
-            <div className="price">Rs {props.product.Price}</div>
-            <div className="add-to-cart">
-              <button 
-              className="add-cart"
-              onClick={() => {
-                setProductCount((prevCount) => prevCount + 1);
-                props.productAddHandler(props.product.Price);
-              }} >ADD CART</button>
-              <div className="inc-dec">
-                <button 
-                className="plus" 
-                onClick={() => {
-                  setProductCount((prevCount) => prevCount + 1);
-                  props.productAddHandler(props.product.Price);
-                }}>+</button>
-                <span className="added-quantity">{productCount}</span>
-                <button 
-                className="minus"
-                disabled={productCount === 0}
-                onClick={() => {
-                  setProductCount((prevCount) => {
-                    return  prevCount === 0? 0: prevCount - 1
-                  });
-                  props.productRemoveHandler(props.product.Price);
-                }}>-</button>
-              </div>
-            </div>
-          </div>
-        </div>
-    );
-};
+	addToCartHandler = () => {
+		this.setState((prevState) => {
+			return {productCount: prevState.productCount + 1};
+		});
+		this.props.productAddHandler(this.props.product.Price);
+	}
 
-export default Product;
+	removeFromCartHandler = () => {
+		this.setState((prevState) => {
+			return {productCount: (prevState.productCount === 0 ? 0: prevState.productCount - 1)};
+		});
+		this.props.productRemoveHandler(this.props.product.Price);
+	
+	}
+
+	render() {
+			return (
+					<div className="product-details">
+				<div className="product-details-left">
+					<div className="product-image">
+							{this.state.imageVisible && <img src={this.props.product.Image_url} alt='product'/>}
+					</div>
+					<div className="product-offer">
+							<span>{this.props.product.Offer_text}</span>
+					</div>
+				</div>
+				<div className="product-details-right">
+					<div className="brand-name">{this.props.product.Brand_name}</div>
+					<div className="product-name">{this.props.product.Product_name}</div>
+					<div className="quantity">{this.props.product.Quantity}</div>
+					<div className="mrp">MRP {this.props.product.MRP}</div>
+					<div className="price">Rs {this.props.product.Price}</div>
+					<div className="add-to-cart">
+						<button 
+						className="add-cart"
+						onClick={() => {this.addToCartHandler()}} >ADD CART</button>
+						<div className="inc-dec">
+							<button 
+							className="plus" 
+							onClick={() => {this.addToCartHandler()}}>+</button>
+							<span className="added-quantity">{this.state.productCount}</span>
+							<button 
+							className="minus"
+							disabled={this.state.productCount === 0}
+							onClick={() => {this.removeFromCartHandler()}}>-</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			);
+	}
+}
+
+export default ProductComponent;

@@ -26,7 +26,7 @@ class ErrorBoundaryComponent extends Component {
     render() {
         if (this.state.hasError) {
           return (
-            <div>
+            <div className="error-page">
               <h3>
                 We encountered a problem while loading the Shopping App.
               </h3>

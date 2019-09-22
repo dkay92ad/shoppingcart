@@ -99,6 +99,56 @@
             "Price": "375",
             "Image_url": "assets/images/Nestle_Orange.webp",
             "Offer_text": ""
+        },
+        {
+            "Product_id": "11",
+            "Brand_name": "Cadbury",
+            "Product_name": "Cadbury Caramilk",
+            "Quantity": "500ML",
+            "MRP": "399",
+            "Price": "349",
+            "Image_url": "assets/images/Cadbury_Caramilk.webp",
+            "Offer_text": "15% off"
+        },
+        {
+            "Product_id": "12",
+            "Brand_name": "Havmor",
+            "Product_name": "Havmore Cranberry Sugar Free",
+            "Quantity": "250ML",
+            "MRP": "195",
+            "Price": "195",
+            "Image_url": "assets/images/Havmor_Cranberry.webp",
+            "Offer_text": "buy 1 get 1"
+        },
+        {
+            "Product_id": "13",
+            "Brand_name": "London Dairy",
+            "Product_name": "London Dairy Natural Strawberry",
+            "Quantity": "1L",
+            "MRP": "500",
+            "Price": "480",
+            "Image_url": "assets/images/London_Dairy.webp",
+            "Offer_text": "7% off"
+        },
+        {
+            "Product_id": "14",
+            "Brand_name": "Magnum",
+            "Product_name": "Magnum Double Cookies & Cream",
+            "Quantity": "1L",
+            "MRP": "530",
+            "Price": "480",
+            "Image_url": "assets/images/Magnum_Double.webp",
+            "Offer_text": "15% off"
+        },
+        {
+            "Product_id": "15",
+            "Brand_name": "Skinny Cow",
+            "Product_name": "Skinny Cow Chocolate Truffle",
+            "Quantity": "500ML",
+            "MRP": "399",
+            "Price": "350",
+            "Image_url": "assets/images/Skinny_Cow.webp",
+            "Offer_text": "12% off"
         }
     ]
 }

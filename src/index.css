@@ -1,3 +1,13 @@
 body{
   margin: 0;
 }
+.update-notification {
+  background-color: #222222;
+  color: #ffffff;
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: translate(50%, 0%);
+  padding: 0.8em 1.2em;
+  text-decoration: none;
+}

@@ -2,6 +2,7 @@ import React, { Component, Suspense } from 'react';
 import './App.css';
 import FooterDetailsComponent from './components/footer-details/FooterDetailsComponent';
 import ModalComponent from './components/modal/ModalComponent';
+import ErrorBoundaryComponent from './components/error-boundary/ErrorBoundaryComponent'; 
 const ProductComponent = React.lazy(() => import('./components/product/ProductComponent'));
 
 class App extends Component {
@@ -31,6 +32,11 @@ class App extends Component {
   }
   componentDidUpdate(){
     console.log('conponentDidUpdate...');
+    //process.env.NODE_ENV = 'production'
+    console.log(process.env.NODE_ENV);
+    this.setState(() => {
+      throw new Error('hi');
+    })
   }
   checkoutHandler = () => {
     this.setState({showModalPopup: true});
@@ -63,18 +69,20 @@ class App extends Component {
 
     return (
       <div className="App">
-        {productsArrayDisplay}
-        {this.state.showModalPopup && <ModalComponent 
-        closeModalHandler = {this.closeModalHandler}
-        cartTotalPrice = {this.state.cartTotalPrice}
-        />}
-        <footer>
-          <FooterDetailsComponent 
-          cartQty = {this.state.cartQty} 
+        <ErrorBoundaryComponent>
+          {productsArrayDisplay}
+          {this.state.showModalPopup && <ModalComponent 
+          closeModalHandler = {this.closeModalHandler}
           cartTotalPrice = {this.state.cartTotalPrice}
-          checkoutHandler = {this.checkoutHandler}
-          />
-        </footer>
+          />}
+          <footer>
+            <FooterDetailsComponent 
+            cartQty = {this.state.cartQty} 
+            cartTotalPrice = {this.state.cartTotalPrice}
+            checkoutHandler = {this.checkoutHandler}
+            />
+          </footer>
+        </ErrorBoundaryComponent>
       </div>
     );
   }

@@ -5,20 +5,24 @@ import './ProductComponent.css';
 const Product = (props) => {
   const [productCount, setProductCount] = useState(0);
   const [imageVisible, setImageVisible] = useState(false);
+
+  const handleScroll = () => {
+    //each product detail takes up 180px height..
+    let visibleElements = parseInt(window.pageYOffset/160) + 3;
+    if(props.product.Product_id <= visibleElements ){
+      setImageVisible(true);
+    }
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, true);
     console.log('counting...');
     if(props.product.Product_id <= 3 ){
       setImageVisible(true);
     }
-  },[]);
-
-  const handleScroll = () => {
-    let visibleElements = parseInt(window.pageYOffset/180) + 3;
-    if(props.product.Product_id <= visibleElements ){
-      setImageVisible(true);
-    }
-  }
+    return () => {window.removeEventListener('scroll', handleScroll, true);}
+  },[props.product.Product_id]);
+  
     return (
         <div className="product-details">
           <div className="product-details-left">

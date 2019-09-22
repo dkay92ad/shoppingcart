@@ -9,7 +9,7 @@ const ModalComponent = (props) => {
             className="close-modal-popup" 
             onClick = {()=>{props.closeModalHandler()}}>X</div>
             <div className="modal-content">
-            <div className="total-price">Total price: {props.cartTotalPrice}</div>
+            <div className="total-price">Total price: ₹ {props.cartTotalPrice}</div>
             <div className="trans-success">Transaction successful!</div>
             </div>
         </div>
